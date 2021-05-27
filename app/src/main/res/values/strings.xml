@@ -7,4 +7,6 @@
     <string name="btn_siguiente">Siguiente</string>
     <string name="btn_resta">Restar</string>
     <string name="btn_atras">Atrás</string>
+    <string name="item1">Sumar</string>
+    <string name="item2">Restar</string>
 </resources>

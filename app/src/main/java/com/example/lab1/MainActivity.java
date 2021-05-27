@@ -1,12 +1,16 @@
 package com.example.lab1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
         et1 = (EditText) findViewById(R.id.txt_num1);
         et2 = (EditText) findViewById(R.id.txt_num2);
@@ -48,5 +55,27 @@ public class MainActivity extends AppCompatActivity {
         startActivity(siguiente);
         
         
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.overflow, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        int id = item.getItemId();
+        if(id == R.id.item1){
+            Toast.makeText(this, "Sumar", Toast.LENGTH_SHORT).show();
+            Intent sumar = new Intent(this, MainActivity.class);
+            startActivity(sumar);
+        }
+        else if(id == R.id.item2){
+            Toast.makeText(this, "Restar", Toast.LENGTH_SHORT).show();
+            Intent restar = new Intent(this, MainActivity2.class);
+            startActivity(restar);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
