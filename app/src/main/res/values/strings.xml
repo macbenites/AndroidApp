@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lab1</string>
+    <string name="txt_num1">Ingresar el 1er valor</string>
+    <string name="txt_num2">Ingresar el 2do valor</string>
+    <string name="btn_sum">Sumar</string>
+    <string name="txt_resultado">Resultado</string>
+    <string name="btn_siguiente">Siguiente</string>
+    <string name="btn_resta">Restar</string>
+    <string name="btn_atras">Atrás</string>
+</resources>
